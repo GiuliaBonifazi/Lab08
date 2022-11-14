@@ -84,7 +84,9 @@ public class BadIOGUI {
             @Override
             public void actionPerformed(final ActionEvent e) {
                 try (BufferedReader r = new BufferedReader(new FileReader(PATH, StandardCharsets.UTF_8))) {
-                    System.out.println(r.readLine()); // NOPMD: allowed as this is just an exercise
+                    for (String lineRead = r.readLine(); lineRead != null; lineRead = r.readLine()) {
+                        System.out.println(lineRead); // NOPMD: allowed as this is just an exercise
+                    }
                 } catch (IOException ex) {
                     System.out.println(ex.getMessage()); // NOPMD: allowed as this is just an exercise
                 }
