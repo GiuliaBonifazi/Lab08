@@ -1,5 +1,5 @@
 *.class
-*/.gradle/*
+.gradle/*
 */bin/*
 */build/*
-*/gradlew.bat
+.gradle
